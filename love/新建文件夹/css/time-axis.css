@@ -1,0 +1,99 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.main{
+	width: 90%;
+	margin: 30px auto;
+}
+
+.time-axis{
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.time-axis:before{
+	content: '';
+	position: absolute;
+	left: 130;
+	top: 15px;
+	width: 1px;
+	height: 100%;
+	background-color: #E4E4E4;
+}
+.time-axis-item{
+	list-style: none;
+	padding-left: 150px;
+	position: relative;
+	line-height: 30px;
+    padding-top: 6px;
+	font-size: 14px;
+	color: #141414;
+}
+.time-axis-achievement{
+	position: absolute;
+	top: 20%;
+	left: 7%;
+	color:#00c4b6;
+	font-size: 12px;
+}
+.time-axis-date{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 120px;
+	color: #1296db;
+	text-align: center;
+	padding-top: 6px;
+}
+
+.time-axis-date span{
+	position: absolute;
+	right: -18px;
+	top: 41%;
+	display: block;
+	width: 13px;
+	height: 13px;
+	border: 1px solid #ccc;
+	border-radius: 100%;
+	background-color: #fff;
+	
+}
+.time-axis-date span:hover{
+	
+}
+.time-axis-date span:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 7px;
+	height: 7px;
+	margin: auto;
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	border-radius: 100%;
+}
+
+
+
+
+.time-axis-item:first-child .time-axis-date span{
+	border-color: #48BEB2;
+}
+
+.time-axis-item:first-child .time-axis-date span:after{
+	background-color: #48BEB2;
+	border-color: #48BEB2;
+}
+
+
+.time-title{
+	font-size:18px;
+	font-weight: 500;
+	margin-left: 90px;
+}

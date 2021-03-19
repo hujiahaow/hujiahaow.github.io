@@ -1,0 +1,25 @@
+<link href="../css/history.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/css/LoveTodos.css">
+<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+ <div class="love-todos"></div>
+ <script type="text/javascript">
+	    //这是要遍历时间轴的数据
+	     var lovetodos=[
+        {todo:'[2021-02-27]   我们一起去看了《人潮汹涌》。',achieve:'',checked:'checked'}, 
+        {todo:'[2021-02-26]   我们一起共度元宵夜。',achieve:'',checked:'checked'}, 
+        {todo:'[2021-01-31]   100 天 快 乐 ！',achieve:'',checked:'checked'}, 
+        {todo:'[2020-12-31]   和你第一次跨年，我们去看了《温暖的抱抱》,还去了郑州最文艺的商城-永威木色购物公园,然后在会展中心看了美丽的夜景,并在玉米楼前合影。',achieve:'',checked:'checked'}, 
+        {todo:'[2020-12-12]   我们一起去看了《如果声音不记得》,然后我们第一次亲吻啦😘',achieve:'',checked:'checked'},  
+        {todo:'[2020-11-21]   我们一起去看了《风平浪静》,还第一次牵你的小手'  ,achieve:'',checked:'checked'}, 
+        {todo:'[2020-10-31]   我们一起去看了《一点就到家》', achieve:'', checked:'checked' },
+        {todo:'[2020-10-24]   我们在一起啦❤️',achieve:'',checked:'checked'}, 
+        {todo:'Waiting for you ...',achieve:'',checked:'checked'}, 
+
+    ];
+    $(document).ready(function(){
+		$.each(lovetodos,function(i,e){
+			var html='<input type="checkbox" name="love" value="love" '+e.checked+'/>'  + e.todo+'<del>'+e.achieve+'</del>'+'<br>' ;
+			$('.love-todos').append(html);		
+		});
+    });
+</script>

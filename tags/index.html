@@ -1,25 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
+<html>
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/1.0'>
   <meta charset="utf-8">
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!-- SEO相关 -->
   
     
   
   <!-- 渲染优化 -->
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
-  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <link rel="preload" href="/css/first.css" as="style">
-  
 
   <!-- 页面元数据 -->
   
@@ -38,84 +31,77 @@
 
   <!-- link -->
   
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/heson525/fontawesome-pro@5.13.1/css/all.min.css">
+
+  
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
     <link rel="shortcut icon" type='image/x-icon' href="https://s3.ax1x.com/2021/01/25/sqqSln.png">
   
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" media="print" onload="this.media='all'">
+  
+
 
   <!-- import link -->
   
 
   
     
-<link rel="stylesheet" href="/css/first.css">
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.2.0/styles/a11y-dark.css">
+
+    
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
 
   
-
   
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
-
-  <script id="loadcss"></script>
-
-  
-<script>
-if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
-    document.write(
-	'<style>'+
-		'html{'+
-			'overflow-x: hidden !important;'+
-			'overflow-y: hidden !important;'+
-		'}'+
-		'.kill-ie{'+
-			'text-align:center;'+
-			'height: 100%;'+
-			'margin-top: 15%;'+
-			'margin-bottom: 5500%;'+
-		'}'+
-	'</style>'+
-    '<div class="kill-ie">'+
-        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
-        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
-        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
-        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
-    '</div>');
-</script>
-
-
-<noscript>
-	<style>
-		html{
-			overflow-x: hidden !important;
-			overflow-y: hidden !important;
-		}
-		.kill-noscript{
-			text-align:center;
-			height: 100%;
-			margin-top: 15%;
-			margin-bottom: 5500%;
-		}
-	</style>
-    <div class="kill-noscript">
-        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
-        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
-    </div>
-</noscript>
-
+    <!-- 脚本懒加载函数 -->
+    <script>
+      function loadScript(src, cb) {
+        var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+        var script = document.createElement('script');
+        script.setAttribute('type','text/javascript');
+        if (cb) script.onload = cb;
+        script.setAttribute('src', src);
+        HEAD.appendChild(script);
+      }
+       </script>
+    
 </head>
 
-  <body>
-    
-
-<header id="l_header" class="l_header auto floatable shadow show" style='opacity: 0' >
+<body>
+  <header class="l_header auto shadow floatable blur" style='opacity: 0' >
   <div class='container'>
-  <div id='wrapper'>
+  <div class='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
-          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
@@ -145,7 +131,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     id="home"
                   >
-                  <i class='fas fa-rss fa-fw'></i>首页
+                  <i class='fal fa-home fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -171,29 +157,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
-                  
-                  
-                  
-                    id="tags"
-                  >
-                  <i class='fas fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
                   
                   
                   
                     id="archives"
                   >
-                  <i class='fas fa-archive fa-fw'></i>归档
+                  <i class='fal fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -203,13 +173,45 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/love/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
                   
                   
                   
-                    id="love"
+                    id="tags"
                   >
-                  <i class='fas fa-heart fa-fw'></i>Love
+                  <i class='fal fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fal fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/message/
+                  
+                  
+                  
+                    id="message"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>留言板
                 </a>
                 
               </li>
@@ -225,7 +227,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     id="friends"
                   >
-                  <i class='fas fa-link fa-fw'></i>友链
+                  <i class='fal fa-link fa-fw'></i>友链
                 </a>
                 
               </li>
@@ -239,10 +241,42 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                   
                   >
-                  <i class='fas fa-list fa-fw'></i>工具
+                  <i class='fal fa-redo fa-spin fa-fw'></i>更多
                 </a>
                 
                   <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fal fa-address-card fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/love/
+                  
+                  
+                  
+                    id="love"
+                  >
+                  <i class='fas fa-heart fa-fw'></i>Love
+                </a>
+                
+              </li>
+            
+          
                     
                       
             
@@ -282,35 +316,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
           
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  <i class='fas fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-          
 				</ul>
 			</div>
 
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <i class="icon fas fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
+          <i class="icon fal fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="搜索..." />
         </form>
       </div>
 
 			<ul class='switcher nav-list-h m-phone'>
 				
-					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+					<li><a class="s-search fal fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
 				
 				<li>
           <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
@@ -325,7 +343,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     id="home"
                   >
-                  <i class='fas fa-rss fa-fw'></i>首页
+                  <i class='fal fa-home fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -351,29 +369,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
-                  
-                  
-                  
-                    id="tags"
-                  >
-                  <i class='fas fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
                   
                   
                   
                     id="archives"
                   >
-                  <i class='fas fa-archive fa-fw'></i>归档
+                  <i class='fal fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -383,13 +385,45 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/love/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
                   
                   
                   
-                    id="love"
+                    id="tags"
                   >
-                  <i class='fas fa-heart fa-fw'></i>Love
+                  <i class='fal fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fal fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/message/
+                  
+                  
+                  
+                    id="message"
+                  >
+                  <i class='fal fa-comments fa-fw'></i>留言板
                 </a>
                 
               </li>
@@ -405,7 +439,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     id="friends"
                   >
-                  <i class='fas fa-link fa-fw'></i>友链
+                  <i class='fal fa-link fa-fw'></i>友链
                 </a>
                 
               </li>
@@ -419,10 +453,42 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                   
                   >
-                  <i class='fas fa-list fa-fw'></i>工具
+                  <i class='fal fa-redo fa-spin fa-fw'></i>更多
                 </a>
                 
                   <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fal fa-address-card fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/love/
+                  
+                  
+                  
+                    id="love"
+                  >
+                  <i class='fas fa-heart fa-fw'></i>Love
+                </a>
+                
+              </li>
+            
+          
                     
                       
             
@@ -462,22 +528,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
             
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  <i class='fas fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-            
           </ul>
         </li>
 			</ul>
@@ -486,19 +536,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </header>
 
-    <div id="l_body">
-      <div id="l_cover">
+  <div class="l_body">
+    <div class="l_cover">
+
   
-    
-        <div id="full" class='cover-wrapper tag featured' style="display: none;">
-          
-            <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg"></div>
-          
-          <div class='cover-body'>
+  
+      <div class='cover-wrapper tag featured' style="display: none;">
+        <canvas id="header_canvas" style="position:absolute;bottom:0;z-index: 1;" width="900" height="350"></canvas>
+        
+          <div class='cover-bg lazyload placeholder' data-bg="https://picup.heson10.com/img/upyun/home_top_bg.webp"></div>
+        
+        <div class='cover-body'>
   <div class='top'>
     
-      <img no-lazy class='logo' src='https://www.hualigs.cn/image/6050af3ab778b.jpg'/>
     
+      <p class="title">WenHao</p>
     
     
   </div>
@@ -511,14 +563,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               id="home">
-              <i class='fas fa-home fa-fw'></i><p>首页</p>
+              <i class='fad fa-home fa-fw'></i><p>首页</p>
             </a>
           
             <a href="/archives/"
               
               
               id="archives">
-              <i class='fas fa-archive fa-fw'></i><p>归档</p>
+              <i class='fad fa-archive fa-fw'></i><p>归档</p>
+            </a>
+          
+            <a href="/links/"
+              
+              
+              id="links">
+              <i class='fad fa-link fa-fw'></i><p>友链</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://www.yuque.com/xrn86n/wenhao"
@@ -528,18 +587,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               <i class='fa fa-edit fa-fw'></i><p>语雀</p>
             </a>
           
-            <a target="_blank" rel="noopener" href="https://github.com/hujiahaow"
-              
-              
-              id="https:githubcomhujiahaow">
-              <i class='fab fa-github fa-fw'></i><p>源码</p>
-            </a>
-          
             <a href="/love/"
               
               
               id="love">
               <i class='fas fa-heart fa-fw'></i><p>Love</p>
+            </a>
+          
+            <a href="/tool"
+              
+              
+              id="tool">
+              <i class='fad fa-paper-plane fa-fw'></i><p>开往</p>
             </a>
           
         
@@ -548,156 +607,185 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </div>
 
-          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
-        </div>
-    
-  
-  </div>
-
-      <div id="safearea">
-        <div class="body-wrapper" id="pjax-container">
-          
-
-
-<div class='l_main'>
-  
-    
-      <div class='post-wrapper'>
-        <article id="tag" class="post article white-box reveal shadow">
-          <h2>标签</h2>
-          <div class="all-tags">
-            
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Icarus/" rel="tag">Icarus</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSM/" rel="tag">SSM</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E8%AF%8D%E7%9F%AD%E8%AF%AD/" rel="tag">动词短语</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BA%E5%AE%9A%E6%90%AD%E9%85%8D/" rel="tag">固定搭配</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%9E%E8%B0%93%E8%AF%AD%E5%8A%A8%E8%AF%8D/" rel="tag">非谓语动词</a><span class="tag-list-count">1</span></li></ul>
-          </div>
-          <br>
-          
-        </article>
+        <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
       </div>
-    
   
+
 </div>
+
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+
+
+<div id="pjax-data" style="display: none">
+  <div id="pjax-ispage">false</div>
+  <div id="pjax-pageTitle"></div>
+  <div id="pjax-enable-cover">true</div>
+  <div id="pjax-comment-path"></div>
+  <div id="pjax-comment-placeholder"></div>
+</div>
+
+
+<script>
+  // 处理封面 此时 jquery 还没加载
+  if ("none" == "none") { // 移除封面
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
+  } else {
+    if ("none" == "half") { // 半屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
+      document.getElementsByClassName('scroll-down')[0].style.display = "none";
+    } else if ("none" == "full") { // 全屏
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
+      document.getElementsByClassName('scroll-down')[0].style.display = "";
+    }
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "";
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show");
+  }
+</script>
+
+
+        
+        
+
+
 <aside class='l_side'>
-  
-  
-    
-    
+  <div style="margin-bottom: 16px;border-radius: 8px;" class='shadow floatable widget_author desktop'>
+    <div id="zuozhebg" class="newauthor"
+      style="background: url(https://www.hualigs.cn/image/604c6bfb3d42a.jpg) center center no-repeat;background-size:cover">
+    </div>
+    <div class="relive_widget_v3">
+      <div class="box-author-info">
+        <div class="author-face">
+          <a href="/about" target="_blank" rel="nofollow" title="关于宁静致远">
+            <img no-lazy alt="" src="https://www.hualigs.cn/image/604c6bfb3d42a.jpg"
+              class="avatar avatar-200 photo" height="200" width="200"> </a>
+        </div>
+        <div class="author-name">宁静致远</div>
+        <div id="author-one" class="author-one">
+          <script>
+            var binft = function (r) {
+              function t() {
+                return b[Math.floor(Math.random() * b.length)]
+              }
+              function e() {
+                return String.fromCharCode(94 * Math.random() + 33)
+              }
+              function n(r) {
+                for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+                  var l = document.createElement("span");
+                  l.textContent = e(), l.style.color = t(), n.appendChild(l)
+                }
+                return n
+              }
+              function i() {
+                var t = o[c.skillI];
+                c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+              }
+              var l = "",
+                o = ["人生在勤，不索何获", "日日待明日,万事成蹉跎", "丈夫志四海，万里犹比邻", "还在看这里吗？", "能不能别看了？", "文章更精彩...."].map(function (r) {
+                  return r + ""
+                }),
+                a = 2,
+                g = 1,
+                s = 5,
+                d = 75,
+                b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+                c = {
+                  text: "",
+                  prefixP: -s,
+                  skillI: 0,
+                  skillP: 0,
+                  direction: "forward",
+                  delay: a,
+                  step: g
+                };
+              i()
+            };
+            binft(document.getElementById('author-one'));
+          </script>
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://www.hualigs.cn/image/604c6bfb3d42a.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>文💕豪</h2>
-        
-        <div id="binft"></div>
-  <script>
-    var binft = function (r) {
-      function t() {
-        return b[Math.floor(Math.random() * b.length)]
-      }  
-      function e() {
-        return String.fromCharCode(94 * Math.random() + 33)
-      }
-      function n(r) {
-        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
-          var l = document.createElement("span");
-          l.textContent = e(), l.style.color = t(), n.appendChild(l)
-        }
-        return n
-      }
-      function i() {
-        var t = o[c.skillI];
-        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
-      }
-      var l = "",
-      o = ["花开堪折直须折，莫待无花空折枝。", "静坐常思己过，闲谈莫论人非。","直道相思了无益，未妨惆怅是清欢。", "春赏百花冬观雪，行也思君，坐也思君。","繁枝容易纷纷落，嫩蕊商量细细开。"].map(function (r) {
-      return r + ""
-      }),
-      a = 2,
-      g = 1,
-      s = 5,
-      d = 75,
-      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
-      c = {
-        text: "",
-        prefixP: -s,
-        skillI: 0,
-        skillP: 0,
-        direction: "forward",
-        delay: a,
-        step: g
-      };
-      i()
-      };
-      binft(document.getElementById('binft'));
-  </script>
-        
-        
+
+        </div>
+        <div class="site-state-wrap motion-element">
+          <nav class="site-state">
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          </nav>
+        </div>
       </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/862960040@qq.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/hujiahaow"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
+       
+      <!-- 主题配置文件开启此功能 按需修改文章标题和链接  -->
+      <dl class="article-newest">
+        <dt>———<span class="tit" style="font-weight: bold;">热门文章</span>———</dt>
+        <li>
+          <span class="order od-1">1</span>
+          <a href="/posts/7207.html" title="Hexo博客调用Valine最新评论"><i
+              class="iconfont icon-sanjiao"></i>Hexo博客调用Valine最新评论</a>
+        </li>
+        <li>
+          <span class="order od-2">2</span>
+          <a href="/posts/53612.html" title="记录一次24H在线要饭系统的搭建"><i class="iconfont icon-sanjiao"></i>记录一次24H在线要饭系统的搭建</a>
+        </li>
+        <li>
+          <span class="order od-3">3</span>
+          <a href="/posts/5892.html" title="给博客增加彩色标签云"><i class="iconfont icon-sanjiao"></i>给博客增加彩色标签云</a>
+        </li>
+        <li>
+          <span class="order od-4">4</span>
+          <a href="/posts/28396.html" title="所有关于Valine评论系统的配置都在这里【合集】"><i
+              class="iconfont icon-sanjiao"></i>所有关于Valine评论系统的配置都在这里【合集】</a>
+        </li>
+        <li>
+          <span class="order od-5">5</span>
+          <a href="/posts/54971.html" title="Hexo在GitHub和Coding双线部署教程"><i
+              class="iconfont icon-sanjiao"></i>Hexo在GitHub和Coding双线部署教程</a>
+        </li>
+        <li>
+          <span class="order od-6">6</span>
+          <a href="/posts/121.html" title="用hexo+github pages+独立域名搭建个人博客"><i
+              class="iconfont icon-sanjiao"></i>用hexo+github pages+独立域名搭建个人博客</a>
+        </li>
+      </dl>
+      
+
+    </div>
   </div>
-</section>
 
   
 
+  
   
     
     
   
 
-  <section class="widget category shadow desktop">
+  <section class="widget category shadow floatable desktop">
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <a href='/categories/'><i class="fal fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
     
   </header>
 
@@ -748,32 +836,158 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
-    
-    
-
-
-
-
-  
 
   
     
     
-  
 
-  <section class="widget tagcloud shadow desktop mobile">
-    
+<section class="widget text shadow floatable desktop">
+  
   <header>
     
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <i class="fal fa-comments fa-fw" aria-hidden="true"></i><span class='name'>最新评论</span>
     
   </header>
 
 
-    <div class='content'>
-      <a href="/tags/English/" style="font-size: 18px; color: #7e7e7e">English</a> <a href="/tags/Hexo/" style="font-size: 20px; color: #707070">Hexo</a> <a href="/tags/Icarus/" style="font-size: 20px; color: #707070">Icarus</a> <a href="/tags/Java/" style="font-size: 24px; color: #555">Java</a> <a href="/tags/Mybatis/" style="font-size: 14px; color: #999">Mybatis</a> <a href="/tags/SSM/" style="font-size: 16px; color: #8b8b8b">SSM</a> <a href="/tags/Spring/" style="font-size: 14px; color: #999">Spring</a> <a href="/tags/%E5%8A%A8%E8%AF%8D%E7%9F%AD%E8%AF%AD/" style="font-size: 14px; color: #999">动词短语</a> <a href="/tags/%E5%9B%BA%E5%AE%9A%E6%90%AD%E9%85%8D/" style="font-size: 14px; color: #999">固定搭配</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 22px; color: #636363">数据结构与算法</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/%E9%9D%9E%E8%B0%93%E8%AF%AD%E5%8A%A8%E8%AF%8D/" style="font-size: 14px; color: #999">非谓语动词</a>
+  <div class='content'>
+    
+      <div id="hot-comments"></div>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget shadow floatable desktop mobile">
+  
+  <header>
+    
+      <i class="fal fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="webinfo">
+      
+        <div class="webinfo-item">
+          <div>文章数目：</div>
+          <div>28 篇</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>已运行时间：</div>
+          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
+        </div>
+        <script>
+          var BirthDay = new Date(new Date('2020/07/06'));
+          var today = new Date();
+          var timeold = (today.getTime() - BirthDay.getTime());
+          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
+          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
+        </script>
+      
+
+
+      
+        <div class="webinfo-item">
+          <div>本站总字数：</div>
+          <div>26.4k 字</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>本站访客数：</div>
+          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>本站总访问量：</div>
+          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
+        </div>
+      
+
+      
+        <div class="webinfo-item">
+          <div>最后活动时间：</div>
+          
+            <div id="last-update" style="display: none;">Sun Mar 21 2021 23:12:53 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2021-03-21 日</div>
+          
+        </div>
+        
+        <script>
+          function timeago(dateTimeStamp) {
+              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
+              var hour = minute * 60;
+              var day = hour * 24;
+              var week = day * 7;
+              var month = day * 30;
+              var now = new Date().getTime(); //获取当前时间毫秒
+              var diffValue = now - dateTimeStamp; //时间差
+              if (diffValue < 0) {
+                  return;
+              }
+              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
+              var hourC = diffValue / hour;
+              var dayC = diffValue / day;
+              var weekC = diffValue / week;
+              var monthC = diffValue / month;
+              if (monthC >= 1 && monthC <= 3) {
+                  result = " " + parseInt(monthC) + " 月前"
+              } else if (weekC >= 1 && weekC <= 3) {
+                  result = " " + parseInt(weekC) + " 周前"
+              } else if (dayC >= 1 && dayC <= 6) {
+                  result = " " + parseInt(dayC) + " 天前"
+              } else if (hourC >= 1 && hourC <= 23) {
+                  result = " " + parseInt(hourC) + " 小时前"
+              } else if (minC >= 1 && minC <= 59) {
+                  result = " " + parseInt(minC) + " 分钟前"
+              } else if (diffValue >= 0 && diffValue <= minute) {
+                  result = "刚刚"
+              } else {
+                  var datetime = new Date();
+                  datetime.setTime(dateTimeStamp);
+                  var Nyear = datetime.getFullYear();
+                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
+                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
+                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
+                  result = Nyear + "-" + Nmonth + "-" + Ndate
+              }
+              return result;
+          }
+          var lastUpDate = document.getElementById('last-update').innerHTML;
+          try {
+            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
+          } catch (error) {
+            document.getElementById('last-update-show').innerHTML = '2021-03-21 日';
+          }
+        </script>
+        
+      
     </div>
-  </section>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+
 
 
   
@@ -781,211 +995,89 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 </aside>
 
-
-		  
-		  <!--此文件用来存放一些不方便取值的变量-->
-<!--思路大概是将值藏到重加载的区域内-->
-
-<script>
-  window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
-  pdata.commentPath="";
-  pdata.commentPlaceholder="";
-  // header 这里无论是否开启pjax都需要
-  var l_header=document.getElementById("l_header");
+<div class='l_main'>
   
-  l_header.classList.add("show");
-  
-  
-    // cover
-    var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="none";
-    cover_wrapper.style.display="none";
+      <div class='post-wrapper'>
+        <article id="tag" class="post article white-box reveal shadow floatable">
+          <h2>标签</h2>
+          <div class="all-tags">
+            <span>按文章数量排列：</span>
+            
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">JAVA</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">HEXO</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Icarus/" rel="tag">ICARUS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">ENGLISH</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSM/" rel="tag">SSM</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">MYBATIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E8%AF%8D%E7%9F%AD%E8%AF%AD/" rel="tag">动词短语</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BA%E5%AE%9A%E6%90%AD%E9%85%8D/" rel="tag">固定搭配</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%9E%E8%B0%93%E8%AF%AD%E5%8A%A8%E8%AF%8D/" rel="tag">非谓语动词</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">SPRING</a><span class="tag-list-count">1</span></li></ul>
+            
+          </div>
+          <script>colortag();</script>
+          <br>
+          
+        </article>
+      </div>
     
   
-</script>
+</div>
 
-        </div>
-        
+
+      </div>
+      
   
   <footer class="footer clearfix">
-    <br><br>
     
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
-      
-    
-      
-        <br>
-        <div class="social-wrapper">
-          
-            
-          
-            
-          
-            
-          
-        </div>
-      
-    
-      
-        
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
-</div>
-        
-      
-    
-      
-        本站使用
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
-        作为主题
-      
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2020-2021</a></p>
+        <p>Copyright © 2020 <a href="/">宁静致远</a></p>
 
         </div>
       
     
+      
+        
+          <div><div><p>本站使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://volantis.js.org/" data-pjax-state="">Volantis</a> 作为主题 | 由 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-cn/" data-pjax-state="">Hexo</a> 强力驱动</p> </div></div>
+        
+      
+    
+    
+      
+        <div class="github-badge">
+          <a style="color:#fff" rel="external nofollow noopener noreferrer" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+          <span class="badge-subject">Powered</span><span class="badge-value" style="background-color:#007ec6;">Hexo</span>
+          </a>
+        </div>
+        
+        <div class="github-badge">
+          <a style="color:#fff" rel="external nofollow noopener noreferrer" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Coding Pages">
+          <span class="badge-subject">Host By</span><span class="badge-value" style="background-color:#4dc820;">GitHub & Coding</span>
+          </a>
+        </div>
+        
+        <div class="github-badge">
+          <a style="color:#fff" rel="external nofollow noopener noreferrer" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+          <span class="badge-subject">DNS</span><span class="badge-value" style="background-color:#8833d7;">Aliyun</span>
+          </a>
+        </div>
+        
+        <div class="github-badge">
+          <a style="color:#fff" rel="external nofollow noopener noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" title="阿里云提供域名相关服务">
+          <span class="badge-subject">CDN</span><span class="badge-value" style="background-color:#ce651b;">又拍云</span>
+          </a>
+        </div>
+        
+      
   </footer>
 
 
-        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
-      </div>
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
     </div>
-    <div>
-      <script>
-/************这个文件存放不需要重载的全局变量和全局函数*********/
-window.volantis={};
-window.volantis.loadcss=document.getElementById("loadcss");
-/******************** Pjax ********************************/
-function VPjax(){
-	this.list=[] // 存放回调函数
-	this.start=()=>{
-	  for(var i=0;i<this.list.length;i++){
-		this.list[i].run();
-	  }
-	}
-	this.push=(fn,name)=>{
-		var f=new PjaxItem(fn,name);
-		this.list.push(f);
-	}
-	// 构造一个可以run的对象
-	function PjaxItem(fn,name){
-		// 函数名称
-		this.name = name || fn.name
-		// run方法
-		this.run=()=>{
-			fn()
-		}
-	}
-}
-volantis.pjax={}
-volantis.pjax.method={
-	complete: new VPjax(),
-	error: new VPjax(),
-	send: new VPjax()
-}
-volantis.pjax={
-	...volantis.pjax,
-	push: volantis.pjax.method.complete.push,
-	error: volantis.pjax.method.error.push,
-	send: volantis.pjax.method.send.push
-}
-/********************脚本懒加载函数********************************/
-// 已经加入了setTimeout
-function loadScript(src, cb) {
-	setTimeout(function() {
-		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-		var script = document.createElement('script');
-		script.setAttribute('type','text/javascript');
-		if (cb) script.onload = cb;
-		script.setAttribute('src', src);
-		HEAD.appendChild(script);
-	});
-}
-//https://github.com/filamentgroup/loadCSS
-var loadCSS = function( href, before, media, attributes ){
-	var doc = window.document;
-	var ss = doc.createElement( "link" );
-	var ref;
-	if( before ){
-		ref = before;
-	}
-	else {
-		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
-		ref = refs[ refs.length - 1];
-	}
-	var sheets = doc.styleSheets;
-	if( attributes ){
-		for( var attributeName in attributes ){
-			if( attributes.hasOwnProperty( attributeName ) ){
-				ss.setAttribute( attributeName, attributes[attributeName] );
-			}
-		}
-	}
-	ss.rel = "stylesheet";
-	ss.href = href;
-	ss.media = "only x";
-	function ready( cb ){
-		if( doc.body ){
-			return cb();
-		}
-		setTimeout(function(){
-			ready( cb );
-		});
-	}
-	ready( function(){
-		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
-	});
-	var onloadcssdefined = function( cb ){
-		var resolvedHref = ss.href;
-		var i = sheets.length;
-		while( i-- ){
-			if( sheets[ i ].href === resolvedHref ){
-				return cb();
-			}
-		}
-		setTimeout(function() {
-			onloadcssdefined( cb );
-		});
-	};
-	function loadCB(){
-		if( ss.addEventListener ){
-			ss.removeEventListener( "load", loadCB );
-		}
-		ss.media = media || "all";
-	}
-	if( ss.addEventListener ){
-		ss.addEventListener( "load", loadCB);
-	}
-	ss.onloadcssdefined = onloadcssdefined;
-	onloadcssdefined( loadCB );
-	return ss;
-};
-</script>
-<script>
-  
-  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
-  
-  
-  
-  
-</script>
-<!-- required -->
+  </div>
+  <div>
+    <!-- required -->
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script>
   function pjax_fancybox() {
-    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+    $(".md").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
       var element = document.createElement("a"); // a 标签
       $(element).attr("class", "fancybox");
       $(element).attr("pjax-fancybox", "");  // 过滤 pjax
@@ -1006,9 +1098,16 @@ var loadCSS = function( href, before, media, attributes ){
       $(span).addClass("image-caption");
       $(span).text(caption); // 加描述
       $(this).after(span);  // 再套一层描述
+      // 背景层
+      var bgDiv = document.createElement("div");
+      $(bgDiv).addClass("bg");
+      if ($(this).attr('bg')) {
+        $(bgDiv).css('background', $(this).attr('bg'));
+      }
+      $(this).wrap(bgDiv); // 背景层
       $(this).wrap(element);  // 最后套 a 标签
     })
-    $(".md .gallery").find("img").fancybox({
+    $(".md").find("img").fancybox({
       selector: '[data-fancybox="images"]',
       hash: false,
       loop: false,
@@ -1022,27 +1121,9 @@ var loadCSS = function( href, before, media, attributes ){
       ]
     });
   };
-  function SCload_fancybox() {
-    if ($(".md .gallery").find("img").length == 0) return;
-    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
-    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
-  };
   $(function () {
-    SCload_fancybox();
+    pjax_fancybox();
   });
-  function Pjax_SCload_fancybox(){
-	if (typeof $.fancybox == "undefined") {
-	 SCload_fancybox();
-    } else {
-	 pjax_fancybox();
-    }
-  }
-  volantis.pjax.push(Pjax_SCload_fancybox)
-  volantis.pjax.send(()=>{
-      if (typeof $.fancybox != "undefined") {
-        $.fancybox.close();    // 关闭弹窗
-      }
-  },'fancybox')
 </script>
 
 
@@ -1051,22 +1132,30 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-<script>
+
+  <script>
   function loadIssuesJS() {
     if ($(".md").find(".issues-api").length == 0) return;
-	
-	  loadScript('/js/issues.js');
-	
+    setTimeout(function() {
+      loadScript('/js/issues.js');
+    }, 1);
   };
   $(function () {
     loadIssuesJS();
   });
-  volantis.pjax.push(()=>{
-	if (typeof IssuesAPI == "undefined") {
-	  loadIssuesJS();
-	}
-  },"IssuesJS")
 </script>
+
+
+
+<!-- optional -->
+
+  <script>
+  
+  var SEARCH_SERVICE = "hexo" || "hexo";
+  var ROOT = "/" || "/";
+  if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+
 
 
 
@@ -1100,60 +1189,255 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
 
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
-  window.FPConfig = {
-	delay: 0,
-	ignoreKeywords: [],
-	maxRPS: 5,
-	hoverDelay: 25
-  };
-</script>
-<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-  <script>
-  function load_twikoo() {
-	
-	  loadScript('https://cdn.jsdelivr.net/npm/twikoo@latest', pjax_twikoo)
-	
-  }
-  function pjax_twikoo() {
-    if(!document.querySelectorAll("#twikoo_container")[0])return;
-    let path = pdata.commentPath;
-    if (path.length == 0) {
-      let defaultPath = '';
-      path = defaultPath || "decodeURI(window.location.pathname)"; //神奇的pathname
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
     }
-    twikoo.init(Object.assign({"js":"https://cdn.jsdelivr.net/npm/twikoo@latest","path":null,"envId":"jiahao999-6gfzvrew487960b5"}, {
-	  el: '#twikoo_container',
-	  path: path,
-    }))
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+<script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
   }
   $(function () {
-    if(!document.querySelectorAll("#twikoo_container")[0])return;
-    load_twikoo();
+    pjax_scrollrebeal();
   });
-   volantis.pjax.push(()=>{
-	  if (typeof twikoo == "undefined") {
-		load_twikoo();
-	  } else {
-		pjax_twikoo();
-	  }
-   },'twikoo');
 </script>
 
 
 
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "填写邮箱会收到回复提示！粘贴图片可直接上传~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "5vT06iC14aOdCPdQuBGPmPc5-gzGzoHsz",
+      appKey: "rdg0wYJza0vj7VY7FriXcrWp",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+      master: '[e48bb41c43733231e5e344c5ae2c2169]',
+      friends: '[104e5bfa98048a2dac66f28ca4d4d846,e399c5e8f4b4b8b86fc88e2b5bd04497,32d39099d6da89788fe3827cb90b1eb7,a5c27d1df34fcd4d8195e7e7d16675d4,09c82fd631755bf5dbb04b4189225637,b548550ae129b82aa01b60e18ccbf141,6a565e6c47127afdd40d5d46089db2c5,4a713ec085a4431f15a8da0942656713&#34;,58bc3a8cecadf26a676e1b8f217698bc,aaf4fe5dd76d0a1390cbd08cdb16c05f,0a106ca9ec8d5e8a2d14f99e5b8bd863,3ecc56d90844b70e49d9f8a61e9cd98c,8a6f99e8ce4af26a93f20c0cbab8a186,5392ad0ec563aa56f6faf597ef966762,6bcf44de7033a4451f38d576fb6e6822,135ae111f8fcfeecc1ea1f06fde149ab]'
+    })
+  }
+
+  function newcomment() {
+
+function queryLeanCloud(k) {
+  let root = this;
+  let len = arguments.length;
+  if (len == 1) {
+    let notExist = new AV.Query("Comment");
+    notExist.doesNotExist('rid');
+    let isEmpty = new AV.Query("Comment");
+    isEmpty.equalTo('rid', '');
+    let q = AV.Query.or(notExist, isEmpty);
+    if (k === '*') q.exists('url');
+    else q.equalTo('url', decodeURI(k));
+    q.addDescending('createdAt');
+    q.addDescending('insertedAt');
+    return q;
+  } else {
+    let ids = JSON.stringify(arguments[1]).replace(/(\[|\])/g, '');
+    let cql = `select * from ${root['config']['clazzName']} where rid in (${ids}) order by -createdAt,-createdAt`;
+    return AV.Query.doCloudQuery(cql)
+  }
+}
+var valine = new Valine({
+      el: '#valine_container_ba',
+      notify: false,
+      verify: false,
+      app_id: '5vT06iC14aOdCPdQuBGPmPc5-gzGzoHsz',
+      app_key: 'rdg0wYJza0vj7VY7FriXcrWp',
+      placeholder: '发表您的意见，让我们一起交流，共同提高吧...',
+      serverURLs: 'https://xxxx'
+});
+
+//判断博主，heson改为自己的昵称
+function bozhu(e){
+    if (e == "heson"){
+        nick = e + '[博主]'
+        return nick;
+    } else {
+      return e
+    }
+}
+
+//判断网址
+function wangzhi(e){
+    http = e.slice(0,4)
+    https = e.slice(0,5)
+    if (http == "http" || https == "https" ){
+         return e
+    } else if (e == "" || e == null || e == undefined){
+      return e
+    } else {
+      e = 'http://'+ e
+      return e
+    }
+}
+
+
+
+
+//查询评论
+valine.Q('*').limit(7).find().then(function (comments) {
+  var hotComments = $("#hot-comments");
+  for (var i = 0; i < comments.length; i++) {
+    if (i === 0) {
+      console.log(comments[0]);
+    }
+    var nick = bozhu(comments[i]._serverData.nick);
+    var content = comments[i]._serverData.comment;
+    var newcontent = content.replace(/<[^>]+>/g,"").replace(/:.*?:/g,"[表情]").substring(0, 50);
+    var url = comments[i]._serverData.url;
+    var link = wangzhi(comments[i]._serverData.link);
+    var updatedAt = timeago(comments[i].updatedAt);
+    var commentId = '#' + comments[i].id;
+    hotComments.append('<div class="card-comment-item"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a>&nbsp;发表于' + updatedAt + '</div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div>');
+  }
+});
+};
+
+
+
+  $(function () {
+    pjax_valine();
+    newcomment();
+  });
+</script>
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
 
 
   
@@ -1161,47 +1445,50 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-<!-- optional -->
 
-  <script>
-const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
-const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
-
-$('.input.u-search-input').one('focus',function(){
-	
-		loadScript('/js/search/hexo.js',setSearchService);
-	
-})
-
-function listenSearch(){
   
-    customSearch = new HexoSearch({
-      imagePath: SearchServiceimagePath
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
     });
+  </script>
+
+
+
+
+
   
-}
-function setSearchService() {
-	listenSearch();
-	
-}
-</script>
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
 
-
-
-
-
-
-
-
+    <script>hljs.initHighlightingOnLoad();</script>
+  
 
 
 
   <script defer>
 
   const LCCounter = {
-    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
-    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
-    custom_api_server: '',
+    app_id: '5vT06iC14aOdCPdQuBGPmPc5-gzGzoHsz',
+    app_key: 'rdg0wYJza0vj7VY7FriXcrWp',
+    custom_api_server: 'https://5vt06ic1.lc-cn-n1-shared.com',
 
     // 查询存储的记录
     getRecord(Counter, url, title) {
@@ -1333,17 +1620,13 @@ function setSearchService() {
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增
-              let curPath = window.location.pathname;
-              if (curPath.includes('index.html')) {
-                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
-              }
-              if (pv.getAttribute('data-path') == curPath) {
+              if (pv.getAttribute('data-path') == window.location.pathname) {
                 incrArr.push(this.buildIncrement(record.objectId));
               }
               if (pv) {
                 var ele = pv.querySelector('#lc-pv #number');
                 if (ele) {
-                  if (pv.getAttribute('data-path') == curPath) {
+                  if (pv.getAttribute('data-path') == window.location.pathname) {
                     ele.innerText = (record.times || 0) + 1;
                   } else {
                     ele.innerText = record.times || 0;
@@ -1406,190 +1689,31 @@ function setSearchService() {
 
 
 
-
-  <script>
-const rootElement = document.documentElement;
-const darkModeStorageKey = "user-color-scheme";
-const rootElementDarkModeAttributeName = "data-user-color-scheme";
-
-const setLS = (k, v) => {
-    localStorage.setItem(k, v);
-};
-
-const removeLS = (k) => {
-    localStorage.removeItem(k);
-};
-
-const getLS = (k) => {
-    return localStorage.getItem(k);
-};
-
-const getModeFromCSSMediaQuery = () => {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-};
-
-const resetRootDarkModeAttributeAndLS = () => {
-  rootElement.removeAttribute(rootElementDarkModeAttributeName);
-  removeLS(darkModeStorageKey);
-};
-
-const validColorModeKeys = {
-  dark: true,
-  light: true,
-};
-
-const applyCustomDarkModeSettings = (mode) => {
-  const currentSetting = mode || getLS(darkModeStorageKey);
-
-  if (currentSetting === getModeFromCSSMediaQuery()) {
-    resetRootDarkModeAttributeAndLS();
-  } else if (validColorModeKeys[currentSetting]) {
-    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
-  } else {
-    resetRootDarkModeAttributeAndLS();
-  }
-};
-
-const invertDarkModeObj = {
-  dark: "light",
-  light: "dark",
-};
-
-/**
- * get target mode
- */
-const toggleCustomDarkMode = () => {
-  let currentSetting = getLS(darkModeStorageKey);
-
-  if (validColorModeKeys[currentSetting]) {
-    currentSetting = invertDarkModeObj[currentSetting];
-  } else if (currentSetting === null) {
-    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
-  } else {
-    return;
-  }
-  setLS(darkModeStorageKey, currentSetting);
-  return currentSetting;
-};
-
-/**
- * bind click event for toggle button
- */
-var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
-function bindToggleButton() {
-    btn.on('click',(e) => {
-      const mode = toggleCustomDarkMode();
-      applyCustomDarkModeSettings(mode);
-    });
-}
-
-applyCustomDarkModeSettings();
-document.addEventListener("DOMContentLoaded", bindToggleButton);
-volantis.pjax.push(bindToggleButton);
-volantis.pjax.send(()=>{
-	btn.unbind('click');
-},'toggle-mode-btn-unbind');
-</script>
-
-
-
-
-
-
-
-
-<script>
-function listennSidebarTOC() {
-  const navItems = document.querySelectorAll(".toc li");
-  if (!navItems.length) return;
-  const sections = [...navItems].map((element) => {
-    const link = element.querySelector(".toc-link");
-    const target = document.getElementById(
-      decodeURI(link.getAttribute("href")).replace("#", "")
-    );
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      window.scrollTo({
-		top: target.offsetTop + 100,
-		
-		behavior: "smooth"
-		
-	  });
-    });
-    return target;
-  });
-
-  function activateNavByIndex(target) {
-    if (target.classList.contains("active-current")) return;
-
-    document.querySelectorAll(".toc .active").forEach((element) => {
-      element.classList.remove("active", "active-current");
-    });
-    target.classList.add("active", "active-current");
-    let parent = target.parentNode;
-    while (!parent.matches(".toc")) {
-      if (parent.matches("li")) parent.classList.add("active");
-      parent = parent.parentNode;
-    }
-  }
-
-  function findIndex(entries) {
-    let index = 0;
-    let entry = entries[index];
-    if (entry.boundingClientRect.top > 0) {
-      index = sections.indexOf(entry.target);
-      return index === 0 ? 0 : index - 1;
-    }
-    for (; index < entries.length; index++) {
-      if (entries[index].boundingClientRect.top <= 0) {
-        entry = entries[index];
-      } else {
-        return sections.indexOf(entry.target);
-      }
-    }
-    return sections.indexOf(entry.target);
-  }
-
-  function createIntersectionObserver(marginTop) {
-    marginTop = Math.floor(marginTop + 10000);
-    let intersectionObserver = new IntersectionObserver(
-      (entries, observe) => {
-        let scrollHeight = document.documentElement.scrollHeight + 100;
-        if (scrollHeight > marginTop) {
-          observe.disconnect();
-          createIntersectionObserver(scrollHeight);
-          return;
-        }
-        let index = findIndex(entries);
-        activateNavByIndex(navItems[index]);
-      },
-      {
-        rootMargin: marginTop + "px 0px -100% 0px",
-        threshold: 0,
-      }
-    );
-    sections.forEach((element) => {
-      element && intersectionObserver.observe(element);
-    });
-  }
-  createIntersectionObserver(document.documentElement.scrollHeight);
-}
-
-document.addEventListener("DOMContentLoaded", listennSidebarTOC);
-document.addEventListener("pjax:success", listennSidebarTOC);
-</script>
-
 <!-- more -->
 
- 
-	   
-	    
+
+    
+      
 
 
 <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
 
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
 
 <script>
     var pjax;
@@ -1598,7 +1722,6 @@ document.addEventListener("pjax:success", listennSidebarTOC);
         elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
         selectors: [
           "title",
-          
           "#pjax-container",
           "#pjax-header-nav-list"
         ],
@@ -1608,12 +1731,12 @@ document.addEventListener("pjax:success", listennSidebarTOC);
     });
 
     document.addEventListener('pjax:send', function (e) {
-      //window.stop(); // 相当于点击了浏览器的停止按钮
+      window.stop(); // 相当于点击了浏览器的停止按钮
 
       try {
         var currentUrl = window.location.pathname;
         var targetUrl = e.triggerElement.href;
-        var banUrl = [""];
+        var banUrl = ["/bb/"];
         if (banUrl[0] != "") {
           banUrl.forEach(item => {
             if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
@@ -1624,45 +1747,78 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       } catch (error) {}
 
       window.subData = null; // 移除标题（用于一二级导航栏切换处）
-
-      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
-      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
-      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+      $.fancybox.close();    // 关闭弹窗
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
 
       // 解绑事件 避免重复监听
-      volantis.$topBtn.unbind('click');
+      $('.s-top').unbind('click');
       $('.menu a').unbind('click');
       $(window).unbind('resize');
       $(window).unbind('scroll');
       $(document).unbind('scroll');
       $(document).unbind('click');
       $('body').unbind('click');
-	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
-	  volantis.pjax.method.send.start();
+      window.ShowLoading();
     });
 
     document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
       $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
       $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
       $('script[data-pjax], .pjax-reload script').each(function () {
         $(this).parent().append($(this).remove());
       });
       try{
-		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
-		volantis.pjax.method.complete.start();
+        pjax_fancybox();
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        
+          if (typeof IssuesAPI == "undefined") {
+            loadIssuesJS();
+          }
+        
+        
+          pjax_initCopyCode();
+        
+        
+          pjax_valine();
+          newcomment();
+        
+        
+        
+        
+        
       } catch (e) {
         console.log(e);
       }
+      window.HideLoading();
     });
 
     document.addEventListener('pjax:error', function (e) {
-	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
-	  volantis.pjax.method.error.start();
+      window.HideLoading();
       window.location.href = e.triggerElement.href;
     });
 </script>
- 
-	  
-    </div>
-  </body>
+
+    
+  </div>
+</body>
 </html>

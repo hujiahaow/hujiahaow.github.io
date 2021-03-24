@@ -63,11 +63,11 @@ html {
   width: 100%;
   height: 100%;
   font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
 }
 html >::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
+  height: 4px;
+  width: 4px;
 }
 html >::-webkit-scrollbar-track-piece {
   background: transparent;
@@ -75,7 +75,7 @@ html >::-webkit-scrollbar-track-piece {
 html >::-webkit-scrollbar-thumb {
   background: #44d7b6;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 html >::-webkit-scrollbar-thumb:hover {
   background: #ff5722;
@@ -574,7 +574,7 @@ th {
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 .cover-wrapper .cover-body .subtitle {
-  font-size: 20px;
+  font-size: 21.25px;
 }
 .cover-wrapper .cover-body .logo {
   max-height: 120px;
@@ -707,7 +707,7 @@ th {
   margin-right: 4px;
 }
 .cover-wrapper.search .bottom .menu .list-h a p {
-  font-size: 1.1rem;
+  font-size: 0.9375rem;
 }
 .cover-wrapper.search .bottom .menu .list-h a:hover,
 .cover-wrapper.search .bottom .menu .list-h a.active,
@@ -1715,7 +1715,7 @@ ul.list-v >li>a:hover {
   overflow: hidden;
   word-break: break-all;
   text-overflow: ellipsis;
-  font-size: 1.1rem;
+  font-size: 0.8125rem;
   color: var(--color-meta);
 }
 #u-search .modal-body .modal-results .result .icon {

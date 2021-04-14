@@ -969,8 +969,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Wed Apr 14 2021 23:27:28 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2021-04-14 日</div>
+            <div id="last-update" style="display: none;">Thu Apr 15 2021 00:03:00 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2021-04-15 日</div>
           
         </div>
         
@@ -1020,7 +1020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-04-14 日';
+            document.getElementById('last-update-show').innerHTML = '2021-04-15 日';
           }
         </script>
         
@@ -1064,52 +1064,44 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
   
   <footer class="footer clearfix">
+    <div style="font-size: 16px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+      <div >
+      <span id="busuanzi_container_site_uv">
+          ❤️ 感谢
+          <span id="busuanzi_value_site_uv">0</span>
+          位小伙伴的
+      </span>
+      <span id="busuanzi_container_site_pv">
+          <span id="busuanzi_value_site_pv">0</span>
+          次陪伴
+      </span></div>
+      🌏<span id="timeDate" style="font-size: 16px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" >载入天数...</span><span id="times">载入时分秒...</span>
+      </div>
+      <div><span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 16px;">Copyright © 2020-2021</span></div>
+  </div>
     <br><br>
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
-      
-    
-      
-        <br>
-        <div class="social-wrapper">
-          
-            
-          
-            
-          
-            
-          
-        </div>
-      
-    
-      
-        
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
-</div>
-        
-      
-    
-      
-        本站使用
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
-        作为主题
-      
-    
-      
-        <div class='copyright'>
-        <p><a href="/">Copyright © 2020-2021</a></p>
-
-        </div>
-      
     
   </footer>
 
 
+
+<script>
+  var now = new Date(); 
+  function createtime() { 
+      var grt= new Date("03/31/2020 11:32:00");//此处修改你的建站时间或者网站上线时间 
+      now.setTime(now.getTime()+250); 
+      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+      document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+      document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+  } 
+setInterval("createtime()",250);
+</script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
         <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
       </div>
     </div>

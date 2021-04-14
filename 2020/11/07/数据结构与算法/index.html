@@ -834,10 +834,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/11/07/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>稀疏数组</p>
-          <p class='content'>基本介绍：当一个数组中大部分元素为０，或者为同一个值的数组时，可以使用稀疏数组来保存该数组。
-稀疏数组的处理方法是:记录数组一共有几行几列，有多少个不同的值把具有不同值的元素的行列及值记录在一个...</p>
+        <a class='prev' href='/2020/11/18/%E7%BA%BF%E6%80%A7%E8%A1%A8/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>线性表</p>
+          <p class='content'>
+线性表是最基本、最简单、也是最常用的一种数据结构。一个线性表是n个具有相同特性的数据元素的有限序列。
+
+
+前驱元素 若A元素在B元素的前面，则称A为B的前驱元素
+后继元素 若B元素在A元素的后...</p>
         </a>
       
       
@@ -2103,6 +2107,27 @@ volantis.pjax.push(bindToggleButton);
 volantis.pjax.send(()=>{
 	btn.unbind('click');
 },'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/Goopher97/mycdn@1.5/slider.min.js"></script>
+
+  <script>
+    function pjax_slider() {
+        if($('#slider')[0]) {
+            $("#slider").sliderImg({
+                imgs: ["https://oopsw.top/img/2.jpg", "https://oopsw.top/img/3.jpg", "https://oopsw.top/img/4.jpg", "https://cdn.jsdelivr.net/gh/Goopher97/tuchuang@master/img/%E5%9B%BE%E6%80%AA%E5%85%BD_c3e24bc3d29796c0593475a22f3a11e0_24823.png", "https://cdn.jsdelivr.net/gh/Goopher97/tuchuang@master/img/shiyongvolantisgengyouya.png"],
+                link: ["/posts/21510.html", "/posts/50300.html", "/posts/24004.html", "/posts/61617.html", "/posts/16065.html"],
+            });
+        }
+    }
+    $(function () {
+        pjax_slider();
+    });
+    volantis.pjax.push(pjax_slider)
 </script>
 
 

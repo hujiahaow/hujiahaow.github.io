@@ -23,14 +23,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>稀疏数组 - 宁静致远</title>
+  <title>数据结构与算法(java版) - 宁静致远</title>
   
     <meta name="keywords" content="数据结构与算法">
   
 
   
-    <meta name="description" content="基本介绍：当一个数组中大部分元素为０，或者为同一个值的数组时，可以使用稀疏数组来保存该数组。
-稀疏数组的处理方法是:记录数组一共有几行几列，有多少个不同的值把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模">
+    <meta name="description" content="参考尚硅谷韩老师的java数据结构与算法">
   
 
   <!-- feed -->
@@ -658,7 +657,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title">
-        稀疏数组
+        数据结构与算法(java版)
       </h1>
       <div class='new-meta-box'>
         
@@ -689,7 +688,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年11月7日</p>
+    <p>发布于：2021年4月13日</p>
   </a>
 </div>
 
@@ -700,7 +699,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="稀疏数组" data-path="/2020/11/07/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">
+      <div id="lc-pv" data-title="数据结构与算法(java版)" data-path="/2021/04/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95(java%E7%89%88)/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -718,11 +717,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <h4 id="基本介绍："><a href="#基本介绍：" class="headerlink" title="基本介绍："></a>基本介绍：</h4><p>当一个数组中大部分元素为０，或者为同一个值的数组时，可以使用稀疏数组来保存该数组。</p>
-<p>稀疏数组的处理方法是:<br>记录数组一共有几行几列，有多少个不同的值<br>把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模</p>
-<a id="more"></a>
+  <h2 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h2><h3 id="实际需求"><a href="#实际需求" class="headerlink" title="实际需求"></a>实际需求</h3><blockquote>
+<p>编写的五子棋程序中，有存盘退出和续上盘的功能。</p>
+</blockquote>
+<p><img src="https://www.hualigs.cn/image/607585f45f106.jpg" class="lazyload" data-srcset="https://www.hualigs.cn/image/607585f45f106.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<blockquote>
+<p>分析问题：</p>
+</blockquote>
+<p>​       因为该二维数组的很多值是默认值0, 因此记录了很多没有意义的数据.-&gt;稀疏数组</p>
+<h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>当一个数组中大部分元素为０，或者为同一个值的数组时，可以使用稀疏数组来保存该数组。</p>
+<p>稀疏数组的处理方法是:<br>1）记录数组一共有几行几列，有多少个不同的值<br>2）把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模</p>
 <p><a target="_blank" rel="noopener" href="https://imgchr.com/i/B4wv9S"><img src="https://s1.ax1x.com/2020/11/07/B4wv9S.png" class="lazyload" data-srcset="https://s1.ax1x.com/2020/11/07/B4wv9S.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="B4wv9S.png"></a></p>
-<h4 id="demo"><a href="#demo" class="headerlink" title="demo:"></a>demo:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.jiahao.sparsearray;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@author</span> HuJiahao</span></span><br><span class="line"><span class="comment">* <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment">* <span class="doctag">@date</span> 2020/11/7 16:56</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SparseArray</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> chessArr1[][] = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line">        chessArr1[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">        chessArr1[<span class="number">2</span>][<span class="number">3</span>] = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span>[] row : chessArr1)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> data : row)&#123;</span><br><span class="line">                System.out.printf(<span class="string">&quot;%d\t&quot;</span>,data);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将二维数组转稀疏数组</span></span><br><span class="line">    <span class="comment">//1.先遍历二维数组 得到非0数据的个数</span></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;chessArr1.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j&lt;chessArr1.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(chessArr1[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    sum++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// System.out.println(&quot;sum=&quot;+sum);</span></span><br><span class="line">        <span class="comment">//2.创建稀疏数组</span></span><br><span class="line">        <span class="keyword">int</span> SparseArr[][] = <span class="keyword">new</span> <span class="keyword">int</span>[sum+<span class="number">1</span>][<span class="number">3</span>];</span><br><span class="line">        <span class="comment">//给稀疏数组赋值</span></span><br><span class="line">        SparseArr[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">11</span>;</span><br><span class="line">        SparseArr[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">11</span>;</span><br><span class="line">        SparseArr[<span class="number">0</span>][<span class="number">2</span>] = sum;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//遍历二维数组，将非0的值存放到SparseArr</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;chessArr1.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j&lt;chessArr1.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(chessArr1[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    count++;</span><br><span class="line">                    SparseArr[count][<span class="number">0</span>] = i;</span><br><span class="line">                    SparseArr[count][<span class="number">1</span>] = j;</span><br><span class="line">                    SparseArr[count][<span class="number">2</span>] = chessArr1[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//输出稀疏数组</span></span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(<span class="string">&quot;-----得到的稀疏数组为:-----&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;SparseArr.length;i++)&#123;</span><br><span class="line">            System.out.printf(<span class="string">&quot;%d\t%d\t%d\t\n&quot;</span>,SparseArr[i][<span class="number">0</span>],SparseArr[i][<span class="number">1</span>],SparseArr[i][<span class="number">2</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将稀疏数组恢复成稀疏数组</span></span><br><span class="line">        <span class="comment">//1.先读取稀疏数组第一行 ，根据第一行的数据，创建原始的二维数组。</span></span><br><span class="line">        <span class="keyword">int</span> chessArr2[][] = <span class="keyword">new</span> <span class="keyword">int</span>[SparseArr[<span class="number">0</span>][<span class="number">0</span>]][SparseArr[<span class="number">0</span>][<span class="number">1</span>]];</span><br><span class="line">        <span class="comment">//2.再读取稀疏数组后几行的数据（从第二行开始） 并赋给原始的二维数组即可</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;SparseArr.length;i++)&#123;</span><br><span class="line">            chessArr2[SparseArr[i][<span class="number">0</span>]][SparseArr[i][<span class="number">1</span>]] = SparseArr[i][<span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//输出恢复后的二维数组</span></span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(<span class="string">&quot;恢复后的二维数组&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span>[] row : chessArr2)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> data : row)&#123;</span><br><span class="line">                System.out.printf(<span class="string">&quot;%d\t&quot;</span>,data);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h3><p>1)使用稀疏数组，来保留类似前面的二维数组(棋盘、地图等等)</p>
+<p>2)把稀疏数组存盘，并且可以从新恢复原来的二维数组数</p>
+<p>3)整体思路分析</p>
+<p><img src="https://www.hualigs.cn/image/60758aa0b8533.jpg" class="lazyload" data-srcset="https://www.hualigs.cn/image/60758aa0b8533.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.jiahao.sparsearray;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@author</span> HuJiahao</span></span><br><span class="line"><span class="comment">* <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment">* <span class="doctag">@date</span> 2020/11/7 16:56</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SparseArray</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> chessArr1[][] = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line">        chessArr1[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">        chessArr1[<span class="number">2</span>][<span class="number">3</span>] = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span>[] row : chessArr1)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> data : row)&#123;</span><br><span class="line">                System.out.printf(<span class="string">&quot;%d\t&quot;</span>,data);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将二维数组转稀疏数组</span></span><br><span class="line">    <span class="comment">//1.先遍历二维数组 得到非0数据的个数</span></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;chessArr1.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j&lt;chessArr1.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(chessArr1[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    sum++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// System.out.println(&quot;sum=&quot;+sum);</span></span><br><span class="line">        <span class="comment">//2.创建稀疏数组</span></span><br><span class="line">        <span class="keyword">int</span> SparseArr[][] = <span class="keyword">new</span> <span class="keyword">int</span>[sum+<span class="number">1</span>][<span class="number">3</span>];</span><br><span class="line">        <span class="comment">//给稀疏数组赋值</span></span><br><span class="line">        SparseArr[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">11</span>;</span><br><span class="line">        SparseArr[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">11</span>;</span><br><span class="line">        SparseArr[<span class="number">0</span>][<span class="number">2</span>] = sum;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//遍历二维数组，将非0的值存放到SparseArr</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;chessArr1.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j&lt;chessArr1.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(chessArr1[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    count++;</span><br><span class="line">                    SparseArr[count][<span class="number">0</span>] = i;</span><br><span class="line">                    SparseArr[count][<span class="number">1</span>] = j;</span><br><span class="line">                    SparseArr[count][<span class="number">2</span>] = chessArr1[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//输出稀疏数组</span></span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(<span class="string">&quot;-----得到的稀疏数组为:-----&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;SparseArr.length;i++)&#123;</span><br><span class="line">            System.out.printf(<span class="string">&quot;%d\t%d\t%d\t\n&quot;</span>,SparseArr[i][<span class="number">0</span>],SparseArr[i][<span class="number">1</span>],SparseArr[i][<span class="number">2</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将稀疏数组恢复成稀疏数组</span></span><br><span class="line">        <span class="comment">//1.先读取稀疏数组第一行 ，根据第一行的数据，创建原始的二维数组。</span></span><br><span class="line">        <span class="keyword">int</span> chessArr2[][] = <span class="keyword">new</span> <span class="keyword">int</span>[SparseArr[<span class="number">0</span>][<span class="number">0</span>]][SparseArr[<span class="number">0</span>][<span class="number">1</span>]];</span><br><span class="line">        <span class="comment">//2.再读取稀疏数组后几行的数据（从第二行开始） 并赋给原始的二维数组即可</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;SparseArr.length;i++)&#123;</span><br><span class="line">            chessArr2[SparseArr[i][<span class="number">0</span>]][SparseArr[i][<span class="number">1</span>]] = SparseArr[i][<span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//输出恢复后的二维数组</span></span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(<span class="string">&quot;恢复后的二维数组&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span>[] row : chessArr2)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> data : row)&#123;</span><br><span class="line">                System.out.printf(<span class="string">&quot;%d\t&quot;</span>,data);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
   
   
     
@@ -739,7 +750,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://hujiahao.top/2020/11/07/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/>https://hujiahao.top/2020/11/07/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/</a></p>
+                <p>本文永久链接是：<a href=https://hujiahao.top/2021/04/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95(java%E7%89%88)/>https://hujiahao.top/2021/04/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95(java%E7%89%88)/</a></p>
               
             
           </blockquote>
@@ -756,10 +767,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-07T11:02:57+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-13T19:59:00+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年11月7日</p>
+    <p>更新于：2021年4月13日</p>
   </a>
 </div>
 
@@ -781,8 +792,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://hujiahao.top/2020/11/07/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/&title=稀疏数组 - 宁静致远&summary=基本介绍：当一个数组中大部分元素为０，或者为同一个值的数组时，可以使用稀疏数组来保存该数组。
-稀疏数组的处理方法是:记录数组一共有几行几列，有多少个不同的值把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://hujiahao.top/2021/04/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95(java%E7%89%88)/&title=数据结构与算法(java版) - 宁静致远&summary="
           
           >
           
@@ -794,8 +804,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://hujiahao.top/2020/11/07/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/&title=稀疏数组 - 宁静致远&summary=基本介绍：当一个数组中大部分元素为０，或者为同一个值的数组时，可以使用稀疏数组来保存该数组。
-稀疏数组的处理方法是:记录数组一共有几行几列，有多少个不同的值把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://hujiahao.top/2021/04/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95(java%E7%89%88)/&title=数据结构与算法(java版) - 宁静致远&summary="
           
           >
           
@@ -807,8 +816,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://hujiahao.top/2020/11/07/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/&title=稀疏数组 - 宁静致远&summary=基本介绍：当一个数组中大部分元素为０，或者为同一个值的数组时，可以使用稀疏数组来保存该数组。
-稀疏数组的处理方法是:记录数组一共有几行几列，有多少个不同的值把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://hujiahao.top/2021/04/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95(java%E7%89%88)/&title=数据结构与算法(java版) - 宁静致远&summary="
           
           >
           
@@ -838,20 +846,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/11/18/%E7%BA%BF%E6%80%A7%E8%A1%A8/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>线性表</p>
-          <p class='content'>
-线性表是最基本、最简单、也是最常用的一种数据结构。一个线性表是n个具有相同特性的数据元素的有限序列。
-
-
-前驱元素 若A元素在B元素的前面，则称A为B的前驱元素
-后继元素 若B元素在A元素的后...</p>
-        </a>
       
-      
-        <a class='next' href='/2020/11/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/'>
-          <p class='title'>数据结构与算法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>线性结构：线性结构作为最常用的数据结构，其特点是数据元素之间存在一对一的线性关系线性结构有两种不同的存储结构，即顺序存储结构和链式存储结构。顺序存储的线性表称为顺序表，顺序表中的存储元素是连续的...</p>
+        <a class='next' href='/2021/03/19/Spring/'>
+          <p class='title'>Spring框架<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Why Spring?
+ Spring makes programming Java quicker,easier, and safer for everybody. Spring’s focu...</p>
         </a>
       
     </div>
@@ -1063,7 +1062,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%EF%BC%9A"><span class="toc-text">基本介绍：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#demo"><span class="toc-text">demo:</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84"><span class="toc-text">稀疏数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E9%9C%80%E6%B1%82"><span class="toc-text">实际需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-text">应用实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-text">代码实现</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1104,7 +1103,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="稀疏数组";
+  pdata.postTitle="数据结构与算法(java版)";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
@@ -2105,6 +2104,27 @@ volantis.pjax.push(bindToggleButton);
 volantis.pjax.send(()=>{
 	btn.unbind('click');
 },'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/Goopher97/mycdn@1.5/slider.min.js"></script>
+
+  <script>
+    function pjax_slider() {
+        if($('#slider')[0]) {
+            $("#slider").sliderImg({
+                imgs: ["https://oopsw.top/img/2.jpg", "https://oopsw.top/img/3.jpg", "https://oopsw.top/img/4.jpg", "https://cdn.jsdelivr.net/gh/Goopher97/tuchuang@master/img/%E5%9B%BE%E6%80%AA%E5%85%BD_c3e24bc3d29796c0593475a22f3a11e0_24823.png", "https://cdn.jsdelivr.net/gh/Goopher97/tuchuang@master/img/shiyongvolantisgengyouya.png"],
+                link: ["/posts/21510.html", "/posts/50300.html", "/posts/24004.html", "/posts/61617.html", "/posts/16065.html"],
+            });
+        }
+    }
+    $(function () {
+        pjax_slider();
+    });
+    volantis.pjax.push(pjax_slider)
 </script>
 
 

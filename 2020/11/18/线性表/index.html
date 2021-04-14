@@ -883,10 +883,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
       
-        <a class='next' href='/2020/11/07/%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/'>
-          <p class='title'>稀疏数组<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>基本介绍：当一个数组中大部分元素为０，或者为同一个值的数组时，可以使用稀疏数组来保存该数组。
-稀疏数组的处理方法是:记录数组一共有几行几列，有多少个不同的值把具有不同值的元素的行列及值记录在一个...</p>
+        <a class='next' href='/2020/11/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/'>
+          <p class='title'>数据结构与算法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>线性结构：线性结构作为最常用的数据结构，其特点是数据元素之间存在一对一的线性关系线性结构有两种不同的存储结构，即顺序存储结构和链式存储结构。顺序存储的线性表称为顺序表，顺序表中的存储元素是连续的...</p>
         </a>
       
     </div>
@@ -2140,6 +2139,27 @@ volantis.pjax.push(bindToggleButton);
 volantis.pjax.send(()=>{
 	btn.unbind('click');
 },'toggle-mode-btn-unbind');
+</script>
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/Goopher97/mycdn@1.5/slider.min.js"></script>
+
+  <script>
+    function pjax_slider() {
+        if($('#slider')[0]) {
+            $("#slider").sliderImg({
+                imgs: ["https://oopsw.top/img/2.jpg", "https://oopsw.top/img/3.jpg", "https://oopsw.top/img/4.jpg", "https://cdn.jsdelivr.net/gh/Goopher97/tuchuang@master/img/%E5%9B%BE%E6%80%AA%E5%85%BD_c3e24bc3d29796c0593475a22f3a11e0_24823.png", "https://cdn.jsdelivr.net/gh/Goopher97/tuchuang@master/img/shiyongvolantisgengyouya.png"],
+                link: ["/posts/21510.html", "/posts/50300.html", "/posts/24004.html", "/posts/61617.html", "/posts/16065.html"],
+            });
+        }
+    }
+    $(function () {
+        pjax_slider();
+    });
+    volantis.pjax.push(pjax_slider)
 </script>
 
 
